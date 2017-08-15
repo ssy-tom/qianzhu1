@@ -23,6 +23,7 @@ html,body{
 	  color: #fff;
 	  transition: ease .6s;
 	  position: relative;
+    overflow: hidden;
 }
 #openBox{
 	position: fixed;
