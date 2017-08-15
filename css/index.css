@@ -20,7 +20,6 @@ html,body{
 	width: 100%;
 	  height: 100%;
 	  background: red;
-	  font-size: 60px;
 	  color: #fff;
 	  transition: ease .6s;
 	  position: relative;
@@ -355,3 +354,5 @@ html,body{
 		margin-top: 40px;
 	}
 }
+
+/*魏福佳第一屏*/

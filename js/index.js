@@ -1,14 +1,16 @@
 (function(window){
 	window.onload = function(){
 		//全屏滚动块
-		screenScrolling()
+        screenScrolling();
 		function screenScrolling(){
 				let box = document.getElementById('box');
 				let openBox = document.getElementById('openBox')
+            let movedown = document.getElementById('movedown');
 				let Bbox = new Cboxc();
-				Bbox.ChuShi(openBox,box)
-				function Cboxc(){
-					this.ChuShi = function(openBox,box){
+            Bbox.ChuShi(openBox, box, movedown);
+            Bbox.movedowns();
+            function Cboxc() {
+                this.ChuShi = function (openBox, box, movedown) {
 						this.openBox = openBox;
 						this.openBoxs = this.openBox.children;
 						this.box = box;
@@ -19,6 +21,7 @@
 						this.StyleBack();
 						this.lungun();
 						this.ifOpen();
+                    this.movedown = movedown;
 					}
 					this.Create = function(){
 						for (let i = 0; i < this.boxs.length; i++) {
@@ -84,6 +87,12 @@
 					this.ifOpen = function(){
 						this.openBox.addEventListener('webkitTransitionEnd',function(){this.lungun()}.bind(this),false)
 					}
+                this.movedowns = function () {
+                    this.movedown.onclick = function () {
+                        this.num++;
+                        this.box.style.transform = 'translate3d(0px,' + -this.num * 100 + '%, 0px)';
+                    }.bind(this)
+                }
 				}
 		}
 
