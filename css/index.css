@@ -51,6 +51,7 @@ html,body{
 	width: 100%;
 	position: relative;
 	top: 232px;
+	transition:all .3s ease-in-out 0s;
 }
 .cases .caption{
 	width: 100%;
