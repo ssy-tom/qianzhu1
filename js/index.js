@@ -175,7 +175,71 @@
         in4bot.addEventListener('mouseleave', function (event) {
             in4mask.style.display = 'none';
         }, false);
+        // 第七屏
+        var qidabox=document.getElementsByClassName('qidabox')[0];
+        var qiinner=document.getElementsByClassName('qiinner');
+        var sectionLeBox=document.getElementsByClassName('sectionLeBox')[0];
+        var qibtn=document.getElementsByClassName('qibtn')
+        var numq=0;
+//刷新时默认的按钮颜色
+        for(var j=0;j<qibtn.length;j++){
+            qibtn[j].style.backgroundColor="#163137"
+        }
+        qibtn[numq].style.backgroundColor="#1C5251"
 
+        animate(qidabox,{marginLeft:-480*numq},1000)
+
+        //一直循环执行轮播函数
+        var tq=setInterval(moveq,2000)
+
+        //按钮点击效果
+        for(var i=0;i<qibtn.length;i++){
+            qibtn[i].index=i;
+            qibtn[i].onmouseover=function(){
+                numq=this.index;
+//鼠标放到按钮上默认的按钮颜色
+                for(var j=0;j<qibtn.length;j++){
+                    qibtn[j].style.backgroundColor="#163137"
+                }
+                qibtn[numq].style.backgroundColor="#1C5251";
+                animate(qidabox,{marginLeft:-480*numq},1000)
+
+                animate(qidabox,{marginLeft:-480*numq},300)
+            }
+        }
+
+//清除动画
+        sectionLeBox.onmouseover=function(){
+            clearInterval(tq)
+        }
+        sectionLeBox.onmouseout=function(){
+            tq=setInterval(moveq,2000)
+        }
+
+        //实现自动轮播的函数
+        function moveq(){
+            numq++
+            if(numq>=qiinner.length-1){
+                animate(qidabox,{marginLeft:-480*numq},1000,function(){
+                    qidabox.style.marginLeft=0;
+                    numq=0
+//实现无缝轮播时的默认按钮颜色
+                    for(var j=0;j<qibtn.length;j++){
+                        qibtn[j].style.backgroundColor="#163137"}
+                    qibtn[numq].style.backgroundColor="#1C5251";
+                    // animate(innerbox,{marginLeft:-400*num},1000)
+
+                })
+            }else{
+//自然轮播时默认的颜色
+                for(var j=0;j<qibtn.length;j++){
+                    qibtn[j].style.backgroundColor="#163137"
+                }
+                qibtn[numq].style.backgroundColor="#1C5251";
+                animate(qidabox,{marginLeft:-480*numq},1000)
+
+            }
+        }
 
     };
 
