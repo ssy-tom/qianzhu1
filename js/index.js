@@ -86,5 +86,17 @@
 					}
 				}
 		}
+
+		//	于爱民第三屏
+		window.onresize=function(){
+			let cases=document.getElementById('cases');
+			let casesH=cases.offsetHeight;
+			let winH=document.documentElement.offsetHeight;
+			let top=(winH-casesH)/2+32;
+			cases.style.top=top+"px";
+			console.log(top)
+		}
+
 	}
-})(window)
+
+})(window);
