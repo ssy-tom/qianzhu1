@@ -105,7 +105,19 @@
 			cases.style.top=top+"px";
 			console.log(top)
 		}
+        //zhuLiping第四屏
+        let in4bot=document.getElementById('inner4_bottom');
+        let in4mask=document.getElementById('in4-mask');
+        in4bot.addEventListener('mouseover',function (event) {
+            in4mask.style.display='block';
+            in4mask.style.left=event.target.offsetLeft+'px';
+            in4mask.style.top=event.target.offsetTop+'px'
+        },false);
+        in4bot.addEventListener('mouseleave',function (event) {
+            in4mask.style.display='none';
+        },false);
 
-	}
+
+    }
 
 })(window);
