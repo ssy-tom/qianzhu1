@@ -45,6 +45,632 @@ html,body{
 	  transition: all .5s ease;
 }
 
+/*王洋洋 css样式*/
+#page2{
+	overflow: hidden;
+}
+/*盒子*/
+.page2-box{
+	position: relative;
+	top: 24.5%;
+	margin-top: -55px;
+	transition: all .3s;
+}
+/*头部*/
+.page2-box-top{
+	width: 100%;
+	text-align: center;
+}
+.page2-box-top>i{
+	display: block;
+	margin: 0 auto;
+	margin-bottom: 20px;
+	width: 320px;
+	height: 31px;
+	background: url(../image/words.png) no-repeat 0 -294px;
+}
+.page2-box-top>span{
+	display: inline-block;
+	font-size: 24px;
+	font-family: '微软雅黑';
+	margin: 0;
+	color: #333333;
+	line-height: normal!important;
+}
+/*内容*/
+.page2-box-middle{
+	width: 1148px;
+	margin: 60px auto 0;
+	overflow: hidden;
+	padding: 0;
+}
+.page2-box-middle>li{
+	width: 200px;
+	height: 300px;
+	margin: 0 9px;
+	background: url(../image/bg_green.png) no-repeat 0 400px;
+	overflow: hidden;
+	float: left;
+	display: inline-block;
+	padding-right: 5px;
+	padding-left: 5px;
+	transition: all .5s;
+}
+.page2-box-middle>li>u{
+	display: block;
+	position: absolute;
+	width: 156px;
+	height: 156px;
+	margin-left: 22px;
+	background: url(../image/words.png) no-repeat 0 -363px;
+	transition: all .5s;
+}
+.cl{
+	clip: rect(0px,156px,156px,78px);
+}
+.cr{
+	clip: rect(0px,78px,156px,0px);
+}
+.page2-box-middle>li>i{
+	display: block;
+	position: relative;
+	margin: 0 auto;
+	margin-top: 43px;
+	height: 69px;
+	transition: all .4s;
+	cursor: pointer;
+}
+.page2-box-middle>li:nth-of-type(1)>i{
+	width: 69px;
+	background: url(../image/words.png) no-repeat -245px -357px;
+}
+.page2-box-middle>li:nth-of-type(2)>i{
+	width: 64px;
+	background: url(../image/words.png) no-repeat -416px -291px;
+}
+.page2-box-middle>li:nth-of-type(3)>i{
+	width: 76px;
+	background: url(../image/words.png) no-repeat -415px -362px;
+}
+.page2-box-middle>li:nth-of-type(4)>i{
+	width: 74px;
+	background: url(../image/words.png) no-repeat -244px -439px;
+}
+.page2-box-middle>li:nth-of-type(5)>i{
+	width: 79px;
+	background: url(../image/words.png) no-repeat -420px -439px;
+}
+.page2-box-middle>li>strong{
+	display: block;
+	margin-top: 70px;
+	font-size: 16px;
+	font-weight: normal;
+	text-align: center;
+	color:#333;
+	font-family: '微软雅黑';
+}
+.page2-box-middle>li>p{
+	position: relative;
+	top: 200px;
+	color: White;
+	font-family: '微软雅黑';
+	font-size: 12px;
+	line-height: 20px;
+	text-align: center;
+	margin: 0;
+	transition: top .5s;
+}
+.page2-box-middle>li:hover .cl{
+	clip: rect(0px,156px,0,78px);
+}
+.page2-box-middle>li:hover .cr{
+	clip: rect(156px,78px,156px,0px);
+}
+.page2-box-middle>li:hover{
+	animation: animation0 .8s ease .5s forwards;
+}
+.page2-box-middle>li:hover strong{
+	animation: animation1 .8s ease .5s forwards;
+}
+.page2-box-middle>li:nth-of-type(1):hover i{
+	animation: animation2 .8s ease .5s forwards;
+}
+.page2-box-middle>li:nth-of-type(2):hover i{
+	animation: animation3 .8s ease .5s forwards;
+}
+.page2-box-middle>li:nth-of-type(3):hover i{
+	animation: animation4 .8s ease .5s forwards;
+}
+.page2-box-middle>li:nth-of-type(4):hover i{
+	animation: animation5 .8s ease .5s forwards;
+}
+.page2-box-middle>li:nth-of-type(5):hover i{
+	animation: animation6 .8s ease .5s forwards;
+}
+.page2-box-middle>li:hover p{
+	animation: animation7 .8s ease .5s forwards;
+}
+@-webkit-keyframes animation0{
+	0%{background: url(../image/bg_green.png) no-repeat 0 400px;}
+	100%{background: url(../image/bg_green.png) no-repeat 0 0;}
+}
+@-webkit-keyframes animation1{
+	0%{color:#333;}
+	100%{color:#fff;}
+}
+@-webkit-keyframes animation2{
+	0%{background-position: -245px -357px}
+	100%{background-position: -168px -357px}
+}
+@-webkit-keyframes animation3{
+	0%{background-position: -416px -291px}
+	100%{background-position: -337px -291px}
+}
+@-webkit-keyframes animation4{
+	0%{background-position: -415px -362px}
+	100%{background-position: -327px -362px}
+}
+@-webkit-keyframes animation5{
+	0%{background-position: -244px -439px}
+	100%{background-position: -164px -439px}
+}
+@-webkit-keyframes animation6{
+	0%{background-position: -420px -439px}
+	100%{background-position: -335px -439px}
+}
+@-webkit-keyframes animation7{
+	0%{-webkit-transform:translateY(0)}
+	100%{-webkit-transform:translateY(-180px)}
+}
+/*底部*/
+.page2-box-bottom{
+	display: block;
+	margin: 0 auto;
+	margin-top: -40px;
+	width: 297px;
+	height: 21px;
+	background: url(../image/words.png) no-repeat 0 -333px;
+}
+/*王洋洋 响应式*/
+/*高度*/
+@media (min-height: 320px) and (max-height: 704px) {
+	.page2-box-top>i{
+		display: none!important;
+	}
+}
+/*宽度*/
+@media (min-width: 1151px) and (max-width: 1366px) {
+
+}
+@media (min-width: 1001px) and (max-width: 1150px) {
+	.page2-box-middle{
+		width: 918px;
+		margin-top: 10px;
+	}
+	.page2-box-middle>li{
+		width: 170px;
+		height: 270px;
+		margin: 0;
+	}
+	.page2-box-middle>li>u{
+		display: none;
+	}
+	.page2-box-middle>li>strong{
+		margin-top: 40px;
+	}
+	.page2-box-middle>li:hover{
+		animation: animation0 .5s ease 0s forwards;
+	}
+	.page2-box-middle>li:hover strong{
+		animation: animation1 .5s ease 0s forwards;
+	}
+	.page2-box-middle>li:nth-of-type(1):hover i{
+		animation: animation2 .5s ease .3s forwards;
+	}
+	.page2-box-middle>li:nth-of-type(2):hover i{
+		animation: animation3 .5s ease .3s forwards;
+	}
+	.page2-box-middle>li:nth-of-type(3):hover i{
+		animation: animation4 .5s ease .3s forwards;
+	}
+	.page2-box-middle>li:nth-of-type(4):hover i{
+		animation: animation5 .5s ease .3s forwards;
+	}
+	.page2-box-middle>li:nth-of-type(5):hover i{
+		animation: animation6 .5s ease .3s forwards;
+	}
+	.page2-box-middle>li:hover p{
+		animation: animation7 .5s ease .3s forwards;
+	}
+}
+@media (min-width: 930px) and (max-width: 1000px){
+	.page2-box-middle{
+		width: 918px;
+		margin-top: 10px;
+	}
+	.page2-box-middle>li{
+		width: 270px;
+		height: 80px;
+		margin: 30px 0 0 21px;
+		padding: 10px 0 5px 15px;
+	}
+	.page2-box-middle>li>u{
+		display: none;
+	}
+	.page2-box-middle>li>strong{
+		float: left;
+		margin: 5px 0 0 20px;
+	}
+	.page2-box-middle>li>i{
+		margin-top: 0;
+		float: left;
+	}
+	.page2-box-middle>li>p{
+		float: left;
+		margin: 0 0 0 20px;
+		text-align: inherit;
+	}
+	.page2-box-bottom{
+		display: none;
+	}
+	.page2-box-middle>li:hover{
+		animation: animation0 .5s ease 0s forwards;
+	}
+	.page2-box-middle>li:hover strong{
+		animation: animation1 .5s ease 0s forwards;
+	}
+	.page2-box-middle>li:nth-of-type(1):hover i{
+		animation: animation2 .5s ease .3s forwards;
+	}
+	.page2-box-middle>li:nth-of-type(2):hover i{
+		animation: animation3 .5s ease .3s forwards;
+	}
+	.page2-box-middle>li:nth-of-type(3):hover i{
+		animation: animation4 .5s ease .3s forwards;
+	}
+	.page2-box-middle>li:nth-of-type(4):hover i{
+		animation: animation5 .5s ease .3s forwards;
+	}
+	.page2-box-middle>li:nth-of-type(5):hover i{
+		animation: animation6 .5s ease .3s forwards;
+	}
+	.page2-box-middle>li:hover p{
+		animation: animation7 .5s ease .3s forwards;
+	}
+	@-webkit-keyframes animation7{
+		0%{-webkit-transform:translateY(0)}
+		100%{-webkit-transform:translateY(-190px)}
+	}
+	.page2-box-middle>li{
+		text-align: left;
+	}
+	.page2-box-middle>li:nth-of-type(4) p{
+		width: 138px;
+	}
+}
+@media (min-width: 621px) and (max-width: 929px){
+	.page2-box-middle{
+		width: 662px;
+		margin: 30px auto 0;
+		padding-left: 0;
+		list-style: none;
+	}
+	.page2-box-middle>li{
+		width: 270px;
+		height: 80px;
+		margin: 30px 0 0 21px;
+		padding: 10px 0 5px 15px;
+		cursor: pointer;
+	}
+	.page2-box-middle>li:hover strong{
+		color: #fff;
+	}
+	.page2-box-middle>li>u{
+		display: none;
+		transition: all 0s;
+	}
+	.page2-box-middle>li>p{
+		width: 270px;
+		height: 400px;
+		text-align: left;
+		padding: 230px 0 0 100px;
+	}
+	.page2-box-middle>li>i{
+		margin-top: 0;
+		float: left
+	}
+	.page2-box-middle>li>strong{
+		float: left;
+		margin: 5px 0 0 20px;
+	}
+	.page2-box-bottom{
+		display: none;
+	}
+	.page2-box-middle>li:hover{
+		animation: animation0 .5s ease 0s forwards;
+	}
+	.page2-box-middle>li:hover strong{
+		animation: animation1 .5s ease 0s forwards;
+	}
+	.page2-box-middle>li:nth-of-type(1):hover i{
+		animation: animation2 .5s ease .3s forwards;
+	}
+	.page2-box-middle>li:nth-of-type(2):hover i{
+		animation: animation3 .5s ease .3s forwards;
+	}
+	.page2-box-middle>li:nth-of-type(3):hover i{
+		animation: animation4 .5s ease .3s forwards;
+	}
+	.page2-box-middle>li:nth-of-type(4):hover i{
+		animation: animation5 .5s ease .3s forwards;
+	}
+	.page2-box-middle>li:nth-of-type(5):hover i{
+		animation: animation6 .5s ease .3s forwards;
+	}
+	.page2-box-middle>li:hover p{
+		animation: animation7 .5s ease .3s forwards;
+	}
+	@-webkit-keyframes animation7{
+		0%{-webkit-transform:translateY(0)}
+		100%{-webkit-transform:translateY(-400px)}
+	}
+	.page2-box-middle>li{
+		text-align: left;
+	}
+	.page2-box-middle>li:nth-of-type(1) p{
+		margin-left: -10px;
+	}
+	.page2-box-middle>li:nth-of-type(2) p{
+		margin-left: -16px;
+	}
+	.page2-box-middle>li:nth-of-type(3) p{
+		margin-left: -5px;
+	}
+	.page2-box-middle>li:nth-of-type(4) p{
+		margin-left: -5px;
+	}
+	.page2-box-middle>li:nth-of-type(5) p{
+		margin-left: -2px;
+	}
+}
+@media (min-width: 426px) and (max-width: 620px) {
+	.page2-box-middle{
+		width: 428px;
+		margin: 30px auto 0;
+		padding-left: 0;
+		list-style: none;
+	}
+	.page2-box-middle>li{
+		width: 173px;
+		height: 43px;
+		margin: 15px 10px 0 10px;
+		padding: 10px 0 5px 15px;
+	}
+	.page2-box-middle>li:hover strong{
+		color: #fff;
+	}
+	.page2-box-middle>li>u{
+		display: none;
+		transition: all 0s;
+	}
+	.page2-box-middle>li>p{
+		width: 270px;
+		height: 400px;
+		text-align: right;
+		padding: 0;
+	}
+	.page2-box-middle>li>i{
+		display: block;
+		position: relative;
+		margin: 0 auto;
+		float: left
+	}
+	.page2-box-middle>li:nth-of-type(1)>i{
+		width: 46px;
+		height: 35px!important;
+		background: url(../image/words_mini.png) no-repeat -145px -217px;
+	}
+	.page2-box-middle>li:nth-of-type(2)>i{
+		width: 46px;
+		height: 39px!important;
+		background: url(../image/words_mini.png) no-repeat -245px -176px;
+	}
+	.page2-box-middle>li:nth-of-type(3)>i{
+		width: 46px;
+		height: 35px!important;
+		background: url(../image/words_mini.png) no-repeat -249px -220px;
+	}
+	.page2-box-middle>li:nth-of-type(4)>i{
+		width: 46px;
+		height: 41px!important;
+		background: url(../image/words_mini.png) no-repeat -146px -264px;
+	}
+	.page2-box-middle>li:nth-of-type(5)>i{
+		width: 47px;
+		height: 38px!important;
+		background: url(../image/words_mini.png) no-repeat -253px -266px;
+	}
+	.page2-box-middle>li>strong{
+		float: left;
+		margin: 5px 0 0 20px;
+	}
+	.page2-box-bottom{
+		display: none;
+	}
+	.page2-box-middle>li:hover{
+		animation: animation0 .5s ease 0s forwards;
+	}
+	.page2-box-middle>li:hover strong{
+		animation: animation1 .5s ease 0s forwards;
+	}
+	.page2-box-middle>li:nth-of-type(1):hover i{
+		animation: animation2 .5s ease .3s forwards;
+	}
+	.page2-box-middle>li:nth-of-type(2):hover i{
+		animation: animation3 .5s ease .3s forwards;
+	}
+	.page2-box-middle>li:nth-of-type(3):hover i{
+		animation: animation4 .5s ease .3s forwards;
+	}
+	.page2-box-middle>li:nth-of-type(4):hover i{
+		animation: animation5 .5s ease .3s forwards;
+	}
+	.page2-box-middle>li:nth-of-type(5):hover i{
+		animation: animation6 .5s ease .3s forwards;
+	}
+	.page2-box-middle>li:hover p{
+		animation: animation7 0s ease 0s forwards;
+	}
+	@-webkit-keyframes animation7{
+		0%{-webkit-transform:translateY(0)}
+		100%{-webkit-transform:translateY(-400px)}
+	}
+	@-webkit-keyframes animation2{
+		0%{background-position: -145px -217px}
+		100%{background-position: -100px -217px}
+	}
+	@-webkit-keyframes animation3{
+		0%{background-position: -245px -176px}
+		100%{background-position: -201px -176px}
+	}
+	@-webkit-keyframes animation4{
+		0%{background-position: -249px -220px}
+		100%{background-position: -196px -220px}
+	}
+	@-webkit-keyframes animation5{
+		0%{background-position: -146px -264px}
+		100%{background-position: -100px -264px}
+	}
+	@-webkit-keyframes animation6{
+		0%{background-position: -253px -266px}
+		100%{background-position: -201px -266px}
+	}
+}
+@media (min-width: 321px) and (max-width: 425px) {
+	.page2-box-middle{
+		width: 215px;
+		margin: 20px auto 0;
+		padding-left: 0;
+		list-style: none;
+	}
+	.page2-box-middle>li{
+		width: 188px;
+		height: 58px;
+		margin: 15px 10px 0 10px;
+		padding: 10px 0 5px 15px;
+		cursor: pointer;
+	}
+	.page2-box-middle>li:hover strong{
+		color: #fff;
+	}
+	.page2-box-middle>li>u{
+		display: none;
+		transition: all 0s;
+	}
+	.page2-box-middle>li>p{
+		width: 270px;
+		height: 400px;
+		text-align: right;
+		padding: 0;
+	}
+	.page2-box-middle>li>i{
+		display: block;
+		position: relative;
+		margin: 0 auto;
+		float: left
+	}
+	.page2-box-middle>li:nth-of-type(1)>i{
+		width: 46px;
+		height: 35px!important;
+		background: url(../image/words_mini.png) no-repeat -145px -217px;
+	}
+	.page2-box-middle>li:nth-of-type(2)>i{
+		width: 46px;
+		height: 39px!important;
+		background: url(../image/words_mini.png) no-repeat -245px -176px;
+	}
+	.page2-box-middle>li:nth-of-type(3)>i{
+		width: 46px;
+		height: 35px!important;
+		background: url(../image/words_mini.png) no-repeat -249px -220px;
+	}
+	.page2-box-middle>li:nth-of-type(4)>i{
+		width: 46px;
+		height: 41px!important;
+		background: url(../image/words_mini.png) no-repeat -146px -264px;
+	}
+	.page2-box-middle>li:nth-of-type(5)>i{
+		width: 47px;
+		height: 38px!important;
+		background: url(../image/words_mini.png) no-repeat -253px -266px;
+	}
+	.page2-box-middle>li>strong{
+		float: left;
+		margin: 5px 0 0 20px;
+	}
+	.page2-box-bottom{
+		display: none;
+	}
+	.page2-box-middle>li:hover{
+		animation: animation0 .5s ease 0s forwards;
+	}
+	.page2-box-middle>li:hover strong{
+		animation: animation1 .5s ease 0s forwards;
+	}
+	.page2-box-middle>li:nth-of-type(1):hover i{
+		animation: animation2 .5s ease .3s forwards;
+	}
+	.page2-box-middle>li:nth-of-type(2):hover i{
+		animation: animation3 .5s ease .3s forwards;
+	}
+	.page2-box-middle>li:nth-of-type(3):hover i{
+		animation: animation4 .5s ease .3s forwards;
+	}
+	.page2-box-middle>li:nth-of-type(4):hover i{
+		animation: animation5 .5s ease .3s forwards;
+	}
+	.page2-box-middle>li:nth-of-type(5):hover i{
+		animation: animation6 .5s ease .3s forwards;
+	}
+	.page2-box-middle>li:hover p{
+		animation: animation7 0s ease 0s forwards;
+	}
+	@-webkit-keyframes animation7{
+		0%{-webkit-transform:translateY(0)}
+		100%{-webkit-transform:translateY(-400px)}
+	}
+	@-webkit-keyframes animation2{
+		0%{background-position: -145px -217px}
+		100%{background-position: -100px -217px}
+	}
+	@-webkit-keyframes animation3{
+		0%{background-position: -245px -176px}
+		100%{background-position: -201px -176px}
+	}
+	@-webkit-keyframes animation4{
+		0%{background-position: -249px -220px}
+		100%{background-position: -196px -220px}
+	}
+	@-webkit-keyframes animation5{
+		0%{background-position: -146px -264px}
+		100%{background-position: -100px -264px}
+	}
+	@-webkit-keyframes animation6{
+		0%{background-position: -253px -266px}
+		100%{background-position: -201px -266px}
+	}
+}
+@media (min-width: 0) and (max-width: 320px) {
+	body{
+		display: none;
+	}
+	html{
+		background: url(../image/displayNone.png) no-repeat 50% top;
+		background-color: #333a32;
+	}
+}
+
+
 /*于爱民第三屏*/
 .cases{
 	line-height: normal;
