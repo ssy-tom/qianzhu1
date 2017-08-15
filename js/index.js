@@ -57,7 +57,6 @@
 					this.ClickNum = function(){
 						this.openBox.addEventListener('click',function(e){
 							if(e.target.className == 'active'){
-								console.log(this.num)
 								this.num = [...this.openBoxs].indexOf(e.target);
 								this.StyleBack();
 								this.box.style.transform = 'translate3d(0px,'+-this.num*100+'%, 0px)';
@@ -88,14 +87,63 @@
 		}
 
 		//	于爱民第三屏
+		let cases=document.getElementById('cases');
+		let casesH=cases.offsetHeight;
+		let winH=document.documentElement.offsetHeight;
+		let top=(winH-casesH)/2+32;
+		cases.style.top=top+"px";
 		window.onresize=function(){
 			let cases=document.getElementById('cases');
 			let casesH=cases.offsetHeight;
 			let winH=document.documentElement.offsetHeight;
 			let top=(winH-casesH)/2+32;
 			cases.style.top=top+"px";
-			console.log(top)
 		}
+		let yamNum=0;
+		function yamAnimation(){
+			var slideW=$(".mini_items .mini_box .slide").eq(0).width();
+			if (!$(".mini_items .mini_box").is(":animated")) {
+				yamNum++;
+				if (yamNum>=3) {
+					$(".mini_items .mini_box").animate({left:-slideW*yamNum},function(){
+						$(this).css("left","0");
+						yamNum=0;
+					})
+				}else{
+					$(".mini_items .mini_box").animate({left:-slideW*yamNum})
+				}
+			};
+		}
+		function yamLeft(){
+			var slideW=$(".mini_items .mini_box .slide").eq(0).width();
+			if (!$(".mini_items .mini_box").is(":animated")) {
+				yamNum--;
+				if (yamNum<0) {
+					$(".mini_items .mini_box").css("left",3*-slideW+"px");
+					yamNum=2;
+				}
+				$(".mini_items .mini_box").animate({left:-slideW*yamNum})
+			};
+		}
+		var yamT=setInterval(yamAnimation,3000)
+
+		$("#cases_prev").hover(function(){
+			clearInterval(yamT)
+		},function(){
+			yamT=setInterval(yamAnimation,3000)
+		})
+		$("#cases_next").hover(function(){
+			clearInterval(yamT)
+		},function(){
+			yamT=setInterval(yamAnimation,3000)
+		})
+		$("#cases_next").on('click',function(){
+			yamAnimation()
+			
+		})
+		$("#cases_prev").on('click',function(){
+			yamLeft()
+		})
 
 	}
 

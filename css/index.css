@@ -181,6 +181,53 @@ html,body{
 	background: #00dfb9;
 	color: #fff;
 }
+.cases .mini_items{
+	width: 340px;
+	margin: 60px auto 0;
+	overflow: hidden;
+	display: none;
+}
+.cases .mini_items .mini_box{
+	width: 1360px;
+	position: relative;
+}
+.cases .mini_items .mini_box .slide{
+	width: 340px;
+	border-bottom: 2px solid #2fd0b5;
+	float: left;
+}
+.cases .mini_items .mini_box .slide a{
+	display: block;
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+.cases .mini_items .mini_box .slide a .img{
+	width: 340px;
+	height: 200px;
+}
+.cases .mini_items .mini_box .slide a p{
+	margin: 10px 20px;
+	font-family:Arial,"宋体";
+	font-size: 12px;
+	color: #999;
+	line-height: 26px;
+	position: absolute;
+	top: 200px;
+	z-index: 2;
+	transition:all .3s ease-in-out 0s;
+}
+.cases .mini_items .mini_box .slide a p strong{
+	font-size: 16px;
+	color: #222;
+	font-weight: normal;
+	font-family: "微软雅黑";
+}
+.cases .mini_items .mini_box .slide a .bg{
+	width: 340px;
+	height: 100px;
+	background: rgba(255,255,255,.5);
+}
 
 
 @media (max-width: 1150px){
@@ -227,45 +274,10 @@ html,body{
 		top: 232px;
 	}
 	.cases .items{
-		width: 360px;
-	}
-	.cases .items .swip{
-		width: 1080px;
-		height: 302px;
-		overflow: hidden;
-	}
-	.cases .items .slide{
-		width: 340px;
-	}
-	.cases .items .slide .img{
-		width: 340px;
-		height: 200px;
-	}
-	.cases .items .slide .img img{
-		width: 340px;
-		height: 200px;
-	}
-	.cases .items .slide p{
-		top: 200px;
-	}
-	.cases .items .slide p strong{
-		font-size: 16px;
-	}
-	.cases .items .slide .bg{
-		width: 340px;
-		height: 100px;
-	}
-	.cases .items .slide .bg u{
 		display: none;
 	}
-	.cases .items .slide .yc_top{
-		display: none;
-	}
-	.cases .items .slide:hover p{
-		color: #999;
-	}
-	.cases .items .slide:hover p strong{
-		color: #222;
+	.cases .mini_items{
+		display: block;
 	}
 	.cases #cases_next{
 		width: 16px;
