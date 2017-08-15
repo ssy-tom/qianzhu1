@@ -144,6 +144,7 @@
 		$("#cases_prev").on('click',function(){
 			yamLeft()
 		})
+        //*****
 
 	}
 
