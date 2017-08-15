@@ -2,15 +2,18 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>千助</title>
+ 	<title>千助</title>
+	<link rel="stylesheet" href="css/bootstrap.css">
 	<link rel="stylesheet" href="css/index.css">
+	<script src="js/jquery-3.2.1.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src='js/index.js'></script>
 	<script src="js/jquery.js"></script>
 	<script src='js/index.js'></script>
 </head>
 <body>
 	<div id="box">
-		<div class="page" id="page1">
+		<div class="page" id="page1" style="background-color: #356;">
 			<!--魏福佳第一屏-->
 			<div class="box">
 				<ul class='carousel'>
@@ -117,6 +120,76 @@
 				</div>
 			</div>
 		</div>
+	    <div class="page" id="page2" style="background:url('image/wp2.jpg')no-repeat 50% bottom / cover">
+			<!--王洋洋-->
+			<div class="page2-box">
+				<div class="page2-box-top">
+					<i></i>
+					<span>我们能做什么</span>
+				</div>
+				<ul class="page2-box-middle">
+					<li>
+						<u class="cl"></u>
+						<u class="cr"></u>
+						<i></i>
+						<strong>高端制定网站</strong>
+						<p>
+							企业高端定制网站设计
+							<br>
+							彰显品牌形象
+						</p>
+					</li>
+					<li>
+						<u class="cl"></u>
+						<u class="cr"></u>
+						<i></i>
+						<strong>移动网站建设</strong>
+						<p>
+							定制手机网站 / 微网站制作
+							<br>
+							布局移动互联网
+						</p>
+					</li>
+					<li>
+						<u class="cl"></u>
+						<u class="cr"></u>
+						<i></i>
+						<strong>业务系统研发</strong>
+						<p>
+							基于 B/S 架构的系统研发
+							<br>
+							让业务办公轻松自如
+						</p>
+					</li>
+					<li>
+						<u class="cl"></u>
+						<u class="cr"></u>
+						<i></i>
+						<strong>APP应用程序</strong>
+						<p>
+							基于 iOS / Android 应用开发
+							<br>
+							掌控智能终端时代
+						</p>
+					</li>
+					<li>
+						<u class="cl"></u>
+						<u class="cr"></u>
+						<i></i>
+						<strong>服务器运维</strong>
+						<p>
+							我们不只提供云硬件和网络
+							<br>
+							更加注重技术运维
+						</p>
+					</li>
+				</ul>
+				<div class="page2-box-bottom">
+
+				</div>
+			</div>
+		</div>
+	    <div class="page" id="page3" style="background:url('image/wp3.jpg')no-repeat 50% bottom / cover">3</div>
 	    <div class="page" id="page2" style="background:url('image/wp2.jpg')no-repeat 50% bottom / cover">2</div>
 	    <div class="page" id="page3" style="background:url('image/wp3.jpg')no-repeat 50% bottom / cover">
 	    	<div class="cases" id="cases">
@@ -193,55 +266,135 @@
 					<div id="cases_prev"></div>
 				</div>
 	    </div>
-	    <div class="page" id="page4" style="background:url('image/wp4.jpg')no-repeat 50% bottom / cover"></div>
-		<div class="page" id="page5" style="background:url('image/wp5.jpg')no-repeat 50% 45%/ cover">
-			<div class="inner5_top">
-				<div class="in5_topPhoto"></div>
-				<div class="in5_content">不同媒介，同样精彩</div>
+	    <div class="page" id="page4" style="background:url('image/wp4.jpg')no-repeat 50% bottom / cover">
+			<div class="inner4_top">
+				<div class="in4_topPhoto"></div>
+				<div class="in4_content">他们与千助长期合作</div>
 			</div>
-			<ul class="inner5-center">
-				<li class="in5-one">
-					<div class="in5-one-top">
-						<span></span>
-						<span></span>
-						<span></span>
-					</div>
-					<p>
-						触及视觉灵魂的设计趋势<br/>
-						精心布局的用户体验<br>
-						毫无顾忌的通过任何终端<br>
-						呈现在客户的眼前
-					</p>
+			<div class="in4-maskbox">
+				<ul class="inner4_bottom" id="inner4_bottom">
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li class="one-none"></li>
+					<li class="none"></li>
+					<li class="none"></li>
+					<li class="none"></li>
+					<li class="none"></li>
+					<li class="none"></li>
+				</ul>
+				<div class="in4-mask" id="in4-mask"></div>
+			</div>
+		</div>
+		<div class="page" id="page5" style="background:url('image/wp5.jpg')no-repeat 50% 45%/ cover">
+			<!--田杨阳-->
+			<div id="five" class="five">
+				<div class="caption">
+					<p></p>
+					<span>不同媒介，同样精彩</span>
+				</div>
+				<ul class="items">
+					<li class="slide">
+						<div class="title">
+							<div class="phone"></div>
+							<div class="pad"></div>
+							<div class="pc"></div>
+						</div>
+						<p>
+							触及视觉灵魂的设计趋势
+							<br>
+							精心布局的用户体验
+							<br>
+							毫无顾忌地通过任何终端
+							<br>
+							呈现在客户的眼前
+						</p>
+					</li>
+					<li class="slide">
+						<div class="title">
+							<div class="ie"></div>
+							<div class="chrome"></div>
+							<div class="firefox"></div>
+							<div class="safari"></div>
+						</div>
+						<p>
+							Html5 + CSS3 响应式布局
+							<br>
+							卓越的浏览器兼容性
+							<br>
+							因为高端，所以出众
+						</p>
 				</li>
-				<li class="in5-one">
-					<div class="in5-one-top in5-two-top">
-						<span></span>
-						<span></span>
-						<span></span>
-						<span></span>
-					</div>
-					<p>
-						Html5 + CSS3 响应式布局<br/>
-						卓越的浏览器兼容性<br>
-						因为高端，所以出众
-					</p>
+					<li class="slide">
+						<div class="title">
+							<div class="windows"></div>
+							<div class="ios"></div>
+							<div class="andriod"></div>
+						</div>
+						<p>
+							基于 B/S 架构的网站建设
+							<br>
+							无障碍的跨平台应用
+							<br>
+							无须用户下载安装即可使用
+							<br>
+							云端管理，轻松维护
+						</p>
 				</li>
-				<li class="in5-one">
-					<div class="in5-one-top in5-three-top">
-						<span></span>
-						<span></span>
-						<span></span>
-					</div>
-					<p>
-						基于 B/S 架构的网站建设<br/>
-						无障碍的跨平台应用<br>
-						无须用户下载安装即可使用<br>
-						云端管理，轻松维护
-					</p>
-				</li>
-			</ul>
-			<div class="in3-oneRect inner5-bot">
-				响应式网站的照妖镜
+				</ul>
+				<div class="items_mini">
+					<ul class="items_mini_box">
+						<li class="slide">
+							<div class="title">
+								<div class="phone"></div>
+								<div class="pad"></div>
+								<div class="pc"></div>
+							</div>
+							<p>
+								触及视觉灵魂的设计趋势
+								<br>
+								精心布局的用户体验
+								<br>
+								毫无顾忌地通过任何终端
+								<br>
+								呈现在客户的眼前
+							</p>
+						</li>
+						<li class="slide">
+							<div class="title2">
+								<div class="ie"></div>
+								<div class="chrome"></div>
+								<div class="firefox"></div>
+								<div class="safari"></div>
+							</div>
+							<p>
+								Html5 + CSS3 响应式布局
+								<br>
+								卓越的浏览器兼容性
+								<br>
+								因为高端，所以出众
+							</p>
+					</li>
+						<li class="slide">
+							<div class="title3">
+								<div class="windows"></div>
+								<div class="ios"></div>
+								<div class="andriod"></div>
+							</div>
+							<p>
+								基于 B/S 架构的网站建设
+								<br>
+								无障碍的跨平台应用
+								<br>
+								无须用户下载安装即可使用
+								<br>
+								云端管理，轻松维护
+							</p>
+					</li>
+					</ul>
+				</div>
+				<a href="#" class="lookall">响应式网站的照妖镜</a>
 			</div>
 
 
