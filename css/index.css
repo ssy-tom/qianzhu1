@@ -2535,3 +2535,301 @@ img {
 	}
 
 }
+
+/*赵梦柔*/
+.disis {
+	height: 44px;
+	width: 1150px;
+	text-align: center;
+	line-height: 44px;
+}
+
+.disis span {
+	font-size: 24px;
+	padding-left: 10px;
+	text-align: center;
+	display: block;
+	padding-top: 10px;
+	color: #333333;
+}
+
+.diliuzhag {
+	width: 100%;
+	height: 235px;
+	margin-top: 50px;
+	list-style: none;
+	padding: 0;
+	margin-left: 50px;
+}
+
+@media (min-width: 1001px) and (max-width: 1300px) {
+	.diliuzhag {
+		width: 100%;
+		height: 235px;
+		margin: 60px -90px;
+	}
+
+	.disis span {
+		text-align: center;
+		line-height: 44px;
+	}
+}
+
+@media (min-width: 601px) and (max-width: 1000px) {
+	.diliuzhag {
+		width: 550px;
+		height: 190px;
+		margin: 0 auto;
+		padding-right: 180px;
+	}
+
+	.disis {
+		width: 741px;
+		height: 91px;
+		text-align: center;
+		line-height: 44px;
+		color: #333333;
+	}
+
+	.disis span {
+		text-align: center;
+		line-height: 44px;
+		color: #333333;
+		padding-top: 40px;
+		margin-right: 120px;
+	}
+
+	.diliuzhag-li {
+		margin-left: 10px;
+	}
+}
+
+@media (min-width: 451px) and (max-width: 600px) {
+	.diliuzhag {
+		width: 500px;
+		height: 234px;
+		margin: 0 -20px;
+	}
+
+	.diliuzhag-li {
+		height: 80px !important;
+		text-align: center !important
+	}
+
+	.disis {
+		width: 304px;
+		height: 80px;
+		text-align: center;
+	}
+
+	.disis span {
+		text-align: center;
+		line-height: 44px;
+		color: #333333;
+	}
+
+	.cl {
+		display: none;
+	}
+
+	.rl {
+		display: none;
+	}
+
+	.tupian {
+		display: none;
+	}
+
+	.tupianone {
+		display: none;
+	}
+
+	.tupiantwo {
+		display: none;
+	}
+
+	.tupianthree {
+		display: none;
+	}
+
+	.tupianfour {
+		display: none;
+	}
+
+	.tupianfive {
+		display: none;
+	}
+
+	.diliuzhag-li p {
+		opacity: 0;
+	}
+}
+
+@media screen and (max-width: 451px) {
+	.diliuzhag {
+		width: 220px;
+		height: 378px;
+		text-align: center;
+		margin-top: -40px;
+		margin-left: 0px;
+	}
+
+	.diliuzhag-li {
+		height: 70px !important;
+		text-align: center !important
+	}
+
+	.disis {
+		width: 304px;
+		height: 80px;
+		text-align: center;
+		margin: 0 -60px;
+	}
+
+	.disis span {
+		text-align: center;
+		line-height: 44px;
+		color: #333333;
+	}
+
+	.cl {
+		display: none;
+	}
+
+	.rl {
+		display: none;
+	}
+
+	.tupian {
+		display: none;
+	}
+
+	.tupianone {
+		display: none;
+	}
+
+	.tupiantwo {
+		display: none;
+	}
+
+	.tupianthree {
+		display: none;
+	}
+
+	.tupianfour {
+		display: none;
+	}
+
+	.tupianfive {
+		display: none;
+	}
+
+	.diliuzhag-li p {
+		opacity: 0;
+	}
+}
+
+.diliuzhag-li {
+	width: 138px;
+	height: 230px;
+	margin: 0px 14px;
+	padding: 0px 1px;
+	float: left;
+	overflow: hidden;
+	position: relative;
+	text-align: center;
+	line-height: 20px;
+	color: #333333;
+}
+
+.cl {
+	width: 128px;
+	height: 128px;
+	border: 5px solid #41CDB2;
+	box-sizing: border-box;
+	border-radius: 50%;
+	position: absolute;
+	clip: rect(156px, 78px, 156px, 0px);
+	transition: all .5s ease;
+}
+
+.rl {
+	width: 128px;
+	height: 128px;
+	border: 5px solid #41CDB2;
+	box-sizing: border-box;
+	border-radius: 50%;
+	position: absolute;
+	transition: all .5s ease;
+	clip: rect(0px, 156px, 0px, 78px)
+}
+
+.diliuzhag-li:hover > .cl {
+	clip: rect(0px, 78px, 156px, 0px);
+}
+
+.diliuzhag-li:hover > .rl {
+	clip: rect(0px, 156px, 156px, 78px)
+}
+
+.tupian {
+	width: 54px;
+	height: 70px;
+	background: url(../image/5.png) no-repeat -126px -562px;
+	background-size: 452px;
+	margin: 24px auto;
+}
+
+.diliuzhag-li strong {
+	margin-top: 50px;
+	text-align: center;
+	display: block;
+	font-size: 16px;
+}
+
+.diliuzhag-li p {
+	line-height: 20px;
+	text-align: center;
+	display: block;
+	font-size: 14px;
+}
+
+.tupianone {
+	width: 74px;
+	height: 70px;
+	background: url(../image/5.png) no-repeat -182px -562px;
+	background-size: 452px;
+	margin: 26px auto;
+}
+
+.tupiantwo {
+	width: 68px;
+	height: 70px;
+	background: url(../image/5.png) no-repeat -256px -562px;
+	background-size: 452px;
+	margin: 26px auto;
+}
+
+.tupianthree {
+	width: 61px;
+	height: 70px;
+	background: url(../image/5.png) no-repeat -328px -562px;
+	background-size: 452px;
+	margin: 26px auto;
+}
+
+.tupianfour {
+	width: 56px;
+	height: 70px;
+	background: url(../image/5.png) no-repeat -394px -570px;
+	background-size: 452px;
+	margin: 26px auto;
+}
+
+.tupianfive {
+	width: 51px;
+	height: 70px;
+	background: url(../image/5.png) no-repeat -130px -630px;
+	background-size: 452px;
+	margin: 26px auto;
+}
