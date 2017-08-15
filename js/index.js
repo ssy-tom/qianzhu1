@@ -104,6 +104,7 @@
 			var slideW=$(".mini_items .mini_box .slide").eq(0).width();
 			if (!$(".mini_items .mini_box").is(":animated")) {
 				yamNum++;
+				console.log(yamNum)
 				if (yamNum>=3) {
 					$(".mini_items .mini_box").animate({left:-slideW*yamNum},function(){
 						$(this).css("left","0");
