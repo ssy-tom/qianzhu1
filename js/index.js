@@ -70,8 +70,8 @@
                         this.box.style.transform = 'translate3d(0px,'+-num*100+'%, 0px)';
                         if(num==0){
                             for(let i=0; i<lis.length;i++){
-                                lis[i].style.fontSize="16px";
-                                lis[i].style.margin="0 10px";
+                                lis[i].style.fontSize="20px";
+                                lis[i].style.margin="0 15px";
                                 lis[i].style.transition="all 0.5s";
                                 lis[i].style.color="#00DFB9"
                             }
@@ -88,8 +88,8 @@
                         this.box.style.transform = 'translate3d(0px,'+-num*100+'%, 0px)';
                         if(num>=1){
                             for(var i=0; i<lis.length;i++){
-                                lis[i].style.fontSize="14px";
-                                lis[i].style.margin="0 8px";
+                                lis[i].style.fontSize="16px";
+                                lis[i].style.margin="0 10px";
                                 lis[i].style.transition="all 0.5s";
                                 lis[i].style.color="#fff"
                             }
@@ -137,11 +137,17 @@
             var positionTop;
             headerUl.addEventListener('mouseover',function(event){
                 if(event.target.className=="liBtn"){
+                    var lis=headerul.children;
                     positionLeft=event.target.offsetLeft;
                     positionTop=event.target.offsetTop;
                     line.style.left=positionLeft+"px";
                     line.style.top=positionTop+"px";
                     line.style.transition="all 0.5s";
+                    [...lis].forEach(function(obj){
+                        obj.style.color="#fff"
+                    }.bind(this),false);
+                    let indexs=[...lis].indexOf(event.target);
+                    lis[indexs].style.color="#00DFB9"
                 }
             },false)
             headerUl.addEventListener('mouseout',function(event){
@@ -149,9 +155,61 @@
                     line.style.left=lis[0].offsetLeft+"px";
                     line.style.top=positionTop+"px";
                     line.style.transition="all 0.5s";
+                    [...lis].forEach(function(obj){
+                        obj.style.color="#fff"
+                    }.bind(this),false);
                 }
             },false)
         }
+        //头部跳转
+        tiaoT();
+        function tiaoT(){
+            function Children(){
+                Parent.call(this);
+            }
+            Children.prototype = Object.create(Parent.prototype);
+            let childrena= new Children;
+            let headerul=document.getElementById("headerul");
+            let box=document.getElementById("box");
+            childrena.init(headerul,box);
+            childrena.listener();
+
+            function Parent(){
+                this.init=function(headerul,box){
+                    this.headerul=headerul;
+                    this.box=box;
+                    //this.num=0;
+                };
+                this.listener=function(){
+                    this.headerul.addEventListener('click',function(e){
+                        if(e.target.className == 'liBtn'){
+                            var lis=this.headerul.children;
+                            //console.log(lis)
+                            num = [...lis].indexOf(e.target);
+                            this.box.style.transform = 'translate3d(0px,'+-num*100+'%, 0px)';
+                            if(num>0){
+                                for(var i=0;i<lis.length;i++){
+                                    lis[i].style.fontSize="16px";
+                                    lis[i].style.margin="0 10px";
+                                    lis[i].style.transition="all 0.5s";
+                                    lis[i].style.color="#fff";
+                                }
+                                lis[num].style.color="#00DFB9";
+                            }else if(num==0){
+                                for(var i=0;i<lis.length;i++){
+                                    lis[i].style.fontSize="20px";
+                                    lis[i].style.margin="0 15px";
+                                    lis[i].style.transition="all 0.5s";
+                                }
+                            }
+
+                        }
+                    }.bind(this),false)
+
+                }
+            }
+        }
+
 
 
 
@@ -313,8 +371,32 @@
     // in4bot.addEventListener('mouseleave', function (event) {
     //     in4mask.style.display = 'none';
     // }, false);
+    //田杨阳第五屏 轮播
+  $(function () {
 
-    // 魏福佳第一屏
+        five_option();
+
+        function five_option() {
+            if ($(window).width() < 1000) {
+                let numm = 0
+                $("#five_prev").click(function () {
+                    numm--;
+                    if (numm <= 0) {
+                        numm = 0;
+                    }
+                    $(".xiangmu_xiao_box").animate({left: -240 * numm}, 500)
+                })
+                $("#five_next").click(function () {
+                    numm++;
+                    if (numm >= 2) {
+                        numm = 2;
+                    }
+                    $(".xiangmu_xiao_box").animate({left: -240 * numm}, 500)
+                })
+            }
+        }
+  })
+        // 魏福佳第一屏
     $(function () {
 
         $(window).resize(function () {
@@ -445,3 +527,4 @@
     //*************
 
 })(window);
+
