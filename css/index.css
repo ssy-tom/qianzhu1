@@ -2524,6 +2524,7 @@ img {
 .disis {
 	height: 100%;
 	text-align: center;
+	margin-top: 50px;
 }
 
 .disis i {
@@ -2590,7 +2591,7 @@ img {
 .tupian {
 	width: 54px;
 	height: 70px;
-	background: url(../image/5.png) no-repeat -126px -562px;
+	background: url(../image/5.png) no-repeat -130px -562px;
 	background-size: 452px;
 	margin: 24px auto;
 }
@@ -2609,28 +2610,28 @@ img {
 .tupianone {
 	width: 74px;
 	height: 70px;
-	background: url(../image/5.png) no-repeat -182px -562px;
+	background: url(../image/5.png) no-repeat -186px -562px;
 	background-size: 452px;
 	margin: 26px auto;
 }
 .tupiantwo {
 	width: 68px;
 	height: 70px;
-	background: url(../image/5.png) no-repeat -256px -562px;
+	background: url(../image/5.png) no-repeat -260px -562px;
 	background-size: 452px;
 	margin: 26px auto;
 }
 .tupianthree {
 	width: 61px;
 	height: 70px;
-	background: url(../image/5.png) no-repeat -328px -562px;
+	background: url(../image/5.png) no-repeat -330px -560px;
 	background-size: 452px;
 	margin: 26px auto;
 }
 .tupianfour {
 	width: 56px;
 	height: 70px;
-	background: url(../image/5.png) no-repeat -394px -570px;
+	background: url(../image/5.png) no-repeat -396px -570px;
 	background-size: 452px;
 	margin: 26px auto;
 }
@@ -2649,32 +2650,15 @@ img {
 		height: 190px;
 		margin: 0 auto;
 	}
-
 	.disis {
 		padding-top: 30px;
 	}
-
-	.disis i {
-		display: block;
-	}
-}
-
-@media (min-width: 451px) and (max-width: 600px) {
-	.diliuzhag {
-		width: 500px;
-		height: 234px;
-		margin: 30px auto 0;
-		text-align: center;
-	}
-
 	.disis i {
 		display: block;
 	}
 
-	.diliuzhag-li {
-		height: 80px !important;
-		text-align: center !important;
-		margin: 15px 10px 0 54px !important;
+	.diliuzhag-li p {
+		opacity: 0;
 	}
 
 	.cl {
@@ -2685,32 +2669,97 @@ img {
 		display: none;
 	}
 
+	.diliuzhag-li {
+		height: 170px;
+	}
+
+	.diliuzhag-li strong {
+		margin-top: 0px;
+	}
+}
+@media (min-width: 451px) and (max-width: 600px) {
+	.diliuzhag {
+		width: 500px;
+		height: 234px;
+		margin: 80px auto 0;
+		text-align: center;
+	}
+
+	.disis {
+		margin-top: 50px;
+	}
+	.disis i {
+		display: block;
+	}
+	.diliuzhag-li {
+		width: 170px !important;
+		height: 43px !important;
+		text-align: center !important;
+		margin: 15px 10px 20px 54px !important;
+	}
+	.cl {
+		display: none;
+	}
+	.rl {
+		display: none;
+	}
+
 	.tupian {
-		display: none;
+		width: 33px;
+		height: 50px;
+		margin: 0 6px;
+		float: left;
+		background: url(../image/5.png) no-repeat -86px -380px;
 	}
 
-	.tupianone {
-		display: none;
-	}
-
-	.tupiantwo {
-		display: none;
-	}
-
-	.tupianthree {
-		display: none;
-	}
-
-	.tupianfour {
-		display: none;
-	}
-
-	.tupianfive {
-		display: none;
+	.diliuzhag-li strong {
+		width: 120px;
+		padding: 0;
+		margin: 11px 20px;
 	}
 
 	.diliuzhag-li p {
 		opacity: 0;
+	}
+
+	.tupianone {
+		width: 45px;
+		height: 50px;
+		margin: 0 0px;
+		float: left;
+		background: url(../image/5.png) no-repeat -124px -380px;
+	}
+
+	.tupiantwo {
+		width: 48px;
+		height: 50px;
+		margin: 0 -1px;
+		float: left;
+		background: url(../image/5.png) no-repeat -171px -380px;
+	}
+
+	.tupianthree {
+		width: 44px;
+		height: 50px;
+		margin: 0 3px;
+		float: left;
+		background: url(../image/5.png) no-repeat -219px -380px;
+	}
+
+	.tupianfour {
+		width: 36px;
+		height: 50px;
+		margin: 0 5px;
+		float: left;
+		background: url(../image/5.png) no-repeat -264px -380px;
+	}
+
+	.tupianfive {
+		width: 33px;
+		height: 50px;
+		margin: 0 6px;
+		float: left;
+		background: url(../image/5.png) no-repeat -86px -422px;
 	}
 }
 
@@ -2721,49 +2770,81 @@ img {
 		text-align: center;
 		margin: 20px auto 0;
 	}
-
 	.diliuzhag-li {
-		height: 70px !important;
-		text-align: center !important
+		width: 170px;
+		height: 43px !important;
+		text-align: center !important;
+		margin-top: 20px;
 	}
 
+	.disis {
+		margin-top: 50px;
+	}
 	.cl {
 		display: none;
 	}
-
 	.rl {
-		display: none;
-	}
-
-	.tupian {
-		display: none;
-	}
-
-	.tupianone {
-		display: none;
-	}
-
-	.tupiantwo {
-		display: none;
-	}
-
-	.tupianthree {
-		display: none;
-	}
-
-	.tupianfour {
-		display: none;
-	}
-
-	.tupianfive {
 		display: none;
 	}
 
 	.diliuzhag-li p {
 		opacity: 0;
 	}
-}
 
+	.tupian {
+		width: 33px;
+		height: 50px;
+		margin: 0 6px;
+		float: left;
+		background: url(../image/5.png) no-repeat -86px -380px;
+	}
+
+	.diliuzhag-li strong {
+		width: 120px;
+		padding: 0;
+		margin: 11px 20px;
+	}
+
+	.tupianone {
+		width: 45px;
+		height: 50px;
+		margin: 0 0px;
+		float: left;
+		background: url(../image/5.png) no-repeat -124px -380px;
+	}
+
+	.tupiantwo {
+		width: 48px;
+		height: 50px;
+		margin: 0 -1px;
+		float: left;
+		background: url(../image/5.png) no-repeat -171px -380px;
+	}
+
+	.tupianthree {
+		width: 44px;
+		height: 50px;
+		margin: 0 3px;
+		float: left;
+		background: url(../image/5.png) no-repeat -219px -380px;
+	}
+
+	.tupianfour {
+		width: 36px;
+		height: 50px;
+		margin: 0 5px;
+		float: left;
+		background: url(../image/5.png) no-repeat -264px -380px;
+	}
+
+	.tupianfive {
+		width: 33px;
+		height: 50px;
+		margin: 0 6px;
+		float: left;
+		background: url(../image/5.png) no-repeat -86px -422px;
+	}
+}
 
 
 
