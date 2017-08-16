@@ -1,101 +1,127 @@
 (function(window) {
     window.onload = function () {
         //全屏滚动块
+        var num=0;
         screenScrolling();
+        function screenScrolling(){
+            var box = document.getElementById('box');
+            var Bbox = new Cboxc();
+            var position;
+            var lis=document.getElementsByClassName("liBtn");
+            var line=document.getElementById("line");
+            var cert=document.getElementsByClassName("cert")[0];
+            var speed=3;
+            var flag=true;
+            line.style.left=lis[num].offsetLeft+"px";
+            Bbox.ChuShi(box);
+            function animation(event){
+                position=lis[num].offsetLeft;
 
-        function screenScrolling() {
-            let box = document.getElementById('box');
-            let openBox = document.getElementById('openBox');
-            let movedown = document.getElementById('movedown');
-            let Bbox = new Cboxc();
-            Bbox.ChuShi(openBox, box, movedown);
-            Bbox.movedowns();
+                if(event.deltaY >0){
+                    if(line.style.left.slice(0,-2)<position&&((line.style.left.slice(0,-2)-0+speed)<position)){
+                        line.style.left=line.style.left.slice(0,-2)-0+speed+"px";
+                    }else{
+                        line.style.left=position+"px";
+                        return ;
 
-            function Cboxc() {
-                this.ChuShi = function (openBox, box, movedown) {
-                    this.openBox = openBox;
-                    this.openBoxs = this.openBox.children;
+                    }
+                }else if(event.deltaY< 0){
+                    if(line.style.left.slice(0,-2)>position&&((line.style.left.slice(0,-2)-0-speed)>position)){
+                        line.style.left=line.style.left.slice(0,-2)-0-speed+"px";
+                    }else{
+                        line.style.left=position+"px";
+                        return;
+                    }
+                }
+                requestAnimationFrame(function(){
+                    animation(event)
+                });
+            }
+
+            function Cboxc(){
+                this.ChuShi = function(box){
                     this.box = box;
                     this.boxs = this.box.children;
-                    this.num = 0;
-                    this.Create();
-                    this.ClickNum();
-                    this.StyleBack();
                     this.lungun();
                     this.ifOpen();
-                    this.movedown = movedown;
-                }
-                this.Create = function () {
-                    for (let i = 0; i < this.boxs.length; i++) {
-                        let Inner = document.createElement('a');
-                        Inner.className = 'active';
-                        this.openBox.appendChild(Inner);
-                    }
-                    ;
-                }
-                this.IfNum = function (tra) {
+                };
+                this.IfNum = function(tra){
                     if (tra == true) {
-                        if (this.num < this.boxs.length - 1) {
-                            this.num++;
+                        if (num < this.boxs.length-1) {
+                            num ++;
                             this.start();
-                        } else {
-                            return;
+                        }else{
+                            return ;
                         }
-                        this.StyleBack();
-                    } else {
-                        if (this.num > 0) {
-                            this.num--;
+                    }else{
+                        if (num > 0) {
+                            num --;
                             this.start();
-                        } else {
-                            return;
+                        }else{
+                            num=0;
                         }
-                        this.StyleBack();
                     }
-                }
-                this.StyleBack = function () {
-                    this.openBoxs[this.num].style.background = 'red';
-                    [...this.openBoxs].forEach(function (value, index) {
-                        value.style.background = '';
-                    })
-                    this.openBoxs[this.num].style.background = 'red';
-                }
-
-                this.ClickNum = function () {
-                    this.openBox.addEventListener('click', function (e) {
-                        if (e.target.className == 'active') {
-                            this.num = [...this.openBoxs].indexOf(e.target);
-                            this.StyleBack();
-                            this.box.style.transform = 'translate3d(0px,' + -this.num * 100 + '%, 0px)';
-                        }
-                    }.bind(this), false)
-                }
-                this.Remove = function (event) {
-                    if (event.deltaY < 0) {
-                        this.box.style.transform = 'translate3d(0px,' + -this.num * 100 + '%, 0px)';
+                };
+                this.Remove = function(event){
+                    //console.log(event)
+                    if(event.deltaY < 0){
+                        this.box.style.transform = 'translate3d(0px,'+-num*100+'%, 0px)';
                         this.IfNum(false);
-                        this.box.style.transform = 'translate3d(0px,' + -this.num * 100 + '%, 0px)';
-                    } else if (event.deltaY > 0) {
-                        this.box.style.transform = 'translate3d(0px,' + -this.num * 100 + '%, 0px)';
+                        this.box.style.transform = 'translate3d(0px,'+-num*100+'%, 0px)';
+                        if(num==0){
+                            for(let i=0; i<lis.length;i++){
+                                lis[i].style.fontSize="16px";
+                                lis[i].style.margin="0 10px";
+                                lis[i].style.transition="all 0.5s";
+                                lis[i].style.color="#00DFB9"
+                            }
+                            line.style.width="32px";
+                            line.style.transition="all 0.1s"
+                        }
+                        for(let i=0; i<lis.length;i++){
+                            lis[i].style.color="#fff"
+                        }
+                        lis[num].style.color="#00DFB9"
+                    }else if(event.deltaY > 0){
+                        this.box.style.transform = 'translate3d(0px,'+-num*100+'%, 0px)';
                         this.IfNum(true);
-                        this.box.style.transform = 'translate3d(0px,' + -this.num * 100 + '%, 0px)';
+                        this.box.style.transform = 'translate3d(0px,'+-num*100+'%, 0px)';
+                        if(num>=1){
+                            for(var i=0; i<lis.length;i++){
+                                lis[i].style.fontSize="14px";
+                                lis[i].style.margin="0 8px";
+                                lis[i].style.transition="all 0.5s";
+                                lis[i].style.color="#fff"
+                            }
+                            lis[num].style.color="#00DFB9";
+                            line.style.width="24px";
+                            line.style.transition="all 0.1s"
+                        }
+
                     }
-                }.bind(this)
-                this.lungun = function () {
-                    window.addEventListener("mousewheel", this.Remove, false);
+                    requestAnimationFrame(function(){
+                        animation(event)
+                    });
+
+                    if(flag) {
+                        cert.style.marginTop="-140px";
+                        flag=false
+
+                    }else{
+                        if(num==0){
+                            cert.style.marginTop="30px"
+                        }
+                        flag = true;
+                    }
+                }.bind(this);
+                this.lungun = function(){
+                    window.addEventListener("mousewheel",this.Remove,false);
                 }
-                this.start = function () {
-                    window.removeEventListener("mousewheel", this.Remove, false);
-                }
-                this.ifOpen = function () {
-                    this.openBox.addEventListener('webkitTransitionEnd', function () {
-                        this.lungun()
-                    }.bind(this), false)
-                }
-                this.movedowns = function () {
-                    this.movedown.onclick = function () {
-                        this.num++;
-                        this.box.style.transform = 'translate3d(0px,' + -this.num * 100 + '%, 0px)';
-                    }.bind(this)
+                this.start = function(){
+                    window.removeEventListener("mousewheel",this.Remove,false);
+                };
+                this.ifOpen = function(){
+                    this.box.addEventListener('webkitTransitionEnd',function(){this.lungun()}.bind(this),false)
                 }
             }
         }
