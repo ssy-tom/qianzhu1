@@ -2666,7 +2666,7 @@ img {
 	font-size: 20px;
 	display: inline-block;
 	margin: auto 15px;
-	line-height: 74px;
+	line-height: 100px;
 	color:#fff;
 }
 .Hfirst>ul>li:nth-of-type(1){
@@ -2674,7 +2674,7 @@ img {
 }
 .hotline{
 	position: fixed;
-	top: 20px;
+	top: 30px;
 	right:40px;
 }
 .hotline>a{
@@ -2691,7 +2691,7 @@ img {
 .hotline>span{
 	display: block;
 	position:fixed;
-	top: 20px;
+	top: 30px;
 	right: 208px;
 	background-color: #006600;
 	width: 30px;
@@ -2699,7 +2699,7 @@ img {
 	background: url(../image/icons.png) no-repeat;
 }
 #line{
-	width:32px;
+	width:40px;
 	height:3px;
 	background-color: #00DFB9;
 	position: absolute;
@@ -2764,7 +2764,10 @@ img {
 	.header .logo > img {
 		display: block;
 		top: 30px;
-		width: 120px;
+		width:120px;
+		height:36px;
+		margin-top: 5px;
+		/*width: 120px;*/
 	}
 	.logo>span{
 		display: none;
@@ -2789,5 +2792,28 @@ img {
 		border-right: none;
 		background: #3a3a3a;
 	}
+	/*.hotline{*/
+		/*left:840px;*/
+	/*}*/
+	.hotline>a>span{
+		right:242px;;
+	}
+	.chuxian{
+		width:20px;
+		height:20px;
+		background-color: #00DFB9;
+		margin: 0;
+		position: absolute;
+		top:7px;
+		right:-30px;
+	}
 
+}
+@media (max-width: 461px) {
+	.hotline>span{
+		right:44px;
+	}
+	.hotline>a>span{
+		display: none;
+	}
 }
