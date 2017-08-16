@@ -313,8 +313,32 @@
     // in4bot.addEventListener('mouseleave', function (event) {
     //     in4mask.style.display = 'none';
     // }, false);
+    //田杨阳第五屏 轮播
+  $(function () {
 
-    // 魏福佳第一屏
+        five_option();
+
+        function five_option() {
+            if ($(window).width() < 1000) {
+                let numm = 0
+                $("#five_prev").click(function () {
+                    numm--;
+                    if (numm <= 0) {
+                        numm = 0;
+                    }
+                    $(".xiangmu_xiao_box").animate({left: -240 * numm}, 500)
+                })
+                $("#five_next").click(function () {
+                    numm++;
+                    if (numm >= 2) {
+                        numm = 2;
+                    }
+                    $(".xiangmu_xiao_box").animate({left: -240 * numm}, 500)
+                })
+            }
+        }
+  })
+        // 魏福佳第一屏
     $(function () {
 
         $(window).resize(function () {
@@ -445,3 +469,4 @@
     //*************
 
 })(window);
+
