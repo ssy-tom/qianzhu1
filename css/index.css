@@ -2924,6 +2924,7 @@ img {
 	margin: auto;
 	background-color: #fff;
 	line-height:0!important;
+	padding: 10px;
 }
 .eight>span{
 	display: inline-block;
@@ -2951,3 +2952,50 @@ img {
 	line-height: 44px!important;
 }
 
+
+/*响应式*/
+
+@media (max-width:1300px) and (min-width:1279px){
+	.logo>span{
+		width: 240px;height:38px;
+		background-image: url("../image/logo.png");
+		background-position: center center;
+		background-size: 240px;
+	}
+	.headerUl{
+		margin-left: 340px;
+	}
+}
+
+
+@media (max-width: 1279px) {
+	.header .logo > img {
+		display: block;
+		top: 30px;
+		width: 120px;
+	}
+	.logo>span{
+		display: none;
+	}
+	.headerUl{
+		margin-left: 290px;
+	}
+
+}
+
+@media (max-width: 1080px) {
+	.Hfirst{
+		display: none;
+		position: fixed;
+		width: 72px;
+		top: 38px;
+		right: -100px;
+		margin: 0px;
+		padding-top: 30px;
+		border: 1px solid #000;
+		border-top: 1px solid #00dfb9;
+		border-right: none;
+		background: #3a3a3a;
+	}
+
+}
