@@ -2522,12 +2522,19 @@ img {
 
 /*赵梦柔*/
 .disis {
-	height: 44px;
-	width: 1150px;
+	height: 100%;
 	text-align: center;
-	line-height: 44px;
 }
 
+.disis i {
+	margin: 0 auto;
+	margin-bottom: 20px;
+	width: 300px;
+	height: 38px;
+	display: block;
+	background: url(../image/words.png) no-repeat -241px -575px;
+	display: none;
+}
 .disis span {
 	font-size: 24px;
 	padding-left: 10px;
@@ -2536,55 +2543,119 @@ img {
 	padding-top: 10px;
 	color: #333333;
 }
-
 .diliuzhag {
-	width: 100%;
-	height: 235px;
-	margin-top: 50px;
+	width: 1010px;
+	margin: 60px auto 0px;
 	list-style: none;
 	padding: 0;
-	margin-left: 50px;
+}
+.diliuzhag-li {
+	width: 138px;
+	height: 230px;
+	margin: 0px 14px;
+	padding: 0px 1px;
+	float: left;
+	overflow: hidden;
+	position: relative;
+	text-align: center;
+	line-height: 20px;
+	color: #333333;
+}
+.cl {
+	width: 128px;
+	height: 128px;
+	border: 5px solid #41CDB2;
+	box-sizing: border-box;
+	border-radius: 50%;
+	position: absolute;
+	clip: rect(156px, 78px, 156px, 0px);
+	transition: all .5s ease;
+}
+.rl {
+	width: 128px;
+	height: 128px;
+	border: 5px solid #41CDB2;
+	box-sizing: border-box;
+	border-radius: 50%;
+	position: absolute;
+	transition: all .5s ease;
+	clip: rect(0px, 156px, 0px, 78px)
+}
+.diliuzhag-li:hover > .cl {
+	clip: rect(0px, 78px, 156px, 0px);
+}
+.diliuzhag-li:hover > .rl {
+	clip: rect(0px, 156px, 156px, 78px)
+}
+.tupian {
+	width: 54px;
+	height: 70px;
+	background: url(../image/5.png) no-repeat -126px -562px;
+	background-size: 452px;
+	margin: 24px auto;
+}
+.diliuzhag-li strong {
+	margin-top: 50px;
+	text-align: center;
+	display: block;
+	font-size: 16px;
+}
+.diliuzhag-li p {
+	line-height: 20px;
+	text-align: center;
+	display: block;
+	font-size: 14px;
+}
+.tupianone {
+	width: 74px;
+	height: 70px;
+	background: url(../image/5.png) no-repeat -182px -562px;
+	background-size: 452px;
+	margin: 26px auto;
+}
+.tupiantwo {
+	width: 68px;
+	height: 70px;
+	background: url(../image/5.png) no-repeat -256px -562px;
+	background-size: 452px;
+	margin: 26px auto;
+}
+.tupianthree {
+	width: 61px;
+	height: 70px;
+	background: url(../image/5.png) no-repeat -328px -562px;
+	background-size: 452px;
+	margin: 26px auto;
+}
+.tupianfour {
+	width: 56px;
+	height: 70px;
+	background: url(../image/5.png) no-repeat -394px -570px;
+	background-size: 452px;
+	margin: 26px auto;
+}
+.tupianfive {
+	width: 51px;
+	height: 70px;
+	background: url(../image/5.png) no-repeat -130px -630px;
+	background-size: 452px;
+	margin: 26px auto;
 }
 
-@media (min-width: 1001px) and (max-width: 1300px) {
-	.diliuzhag {
-		width: 100%;
-		height: 235px;
-		margin: 60px -90px;
-	}
-
-	.disis span {
-		text-align: center;
-		line-height: 44px;
-	}
-}
-
+/*响应式*/
 @media (min-width: 601px) and (max-width: 1000px) {
 	.diliuzhag {
 		width: 550px;
 		height: 190px;
 		margin: 0 auto;
-		padding-right: 180px;
 	}
 
 	.disis {
-		width: 741px;
-		height: 91px;
-		text-align: center;
-		line-height: 44px;
-		color: #333333;
+		padding-top: 30px;
 	}
 
-	.disis span {
-		text-align: center;
-		line-height: 44px;
-		color: #333333;
-		padding-top: 40px;
-		margin-right: 120px;
-	}
-
-	.diliuzhag-li {
-		margin-left: 10px;
+	.disis i {
+		display: block;
 	}
 }
 
@@ -2592,24 +2663,18 @@ img {
 	.diliuzhag {
 		width: 500px;
 		height: 234px;
-		margin: 0 -20px;
+		margin: 30px auto 0;
+		text-align: center;
+	}
+
+	.disis i {
+		display: block;
 	}
 
 	.diliuzhag-li {
 		height: 80px !important;
-		text-align: center !important
-	}
-
-	.disis {
-		width: 304px;
-		height: 80px;
-		text-align: center;
-	}
-
-	.disis span {
-		text-align: center;
-		line-height: 44px;
-		color: #333333;
+		text-align: center !important;
+		margin: 15px 10px 0 54px !important;
 	}
 
 	.cl {
@@ -2654,26 +2719,12 @@ img {
 		width: 220px;
 		height: 378px;
 		text-align: center;
-		margin-top: -40px;
-		margin-left: 0px;
+		margin: 20px auto 0;
 	}
 
 	.diliuzhag-li {
 		height: 70px !important;
 		text-align: center !important
-	}
-
-	.disis {
-		width: 304px;
-		height: 80px;
-		text-align: center;
-		margin: 0 -60px;
-	}
-
-	.disis span {
-		text-align: center;
-		line-height: 44px;
-		color: #333333;
 	}
 
 	.cl {
@@ -2713,114 +2764,14 @@ img {
 	}
 }
 
-.diliuzhag-li {
-	width: 138px;
-	height: 230px;
-	margin: 0px 14px;
-	padding: 0px 1px;
-	float: left;
-	overflow: hidden;
-	position: relative;
-	text-align: center;
-	line-height: 20px;
-	color: #333333;
-}
 
-.cl {
-	width: 128px;
-	height: 128px;
-	border: 5px solid #41CDB2;
-	box-sizing: border-box;
-	border-radius: 50%;
-	position: absolute;
-	clip: rect(156px, 78px, 156px, 0px);
-	transition: all .5s ease;
-}
 
-.rl {
-	width: 128px;
-	height: 128px;
-	border: 5px solid #41CDB2;
-	box-sizing: border-box;
-	border-radius: 50%;
-	position: absolute;
-	transition: all .5s ease;
-	clip: rect(0px, 156px, 0px, 78px)
-}
 
-.diliuzhag-li:hover > .cl {
-	clip: rect(0px, 78px, 156px, 0px);
-}
 
-.diliuzhag-li:hover > .rl {
-	clip: rect(0px, 156px, 156px, 78px)
-}
 
-.tupian {
-	width: 54px;
-	height: 70px;
-	background: url(../image/5.png) no-repeat -126px -562px;
-	background-size: 452px;
-	margin: 24px auto;
-}
 
-.diliuzhag-li strong {
-	margin-top: 50px;
-	text-align: center;
-	display: block;
-	font-size: 16px;
-}
-
-.diliuzhag-li p {
-	line-height: 20px;
-	text-align: center;
-	display: block;
-	font-size: 14px;
-}
-
-.tupianone {
-	width: 74px;
-	height: 70px;
-	background: url(../image/5.png) no-repeat -182px -562px;
-	background-size: 452px;
-	margin: 26px auto;
-}
-
-.tupiantwo {
-	width: 68px;
-	height: 70px;
-	background: url(../image/5.png) no-repeat -256px -562px;
-	background-size: 452px;
-	margin: 26px auto;
-}
-
-.tupianthree {
-	width: 61px;
-	height: 70px;
-	background: url(../image/5.png) no-repeat -328px -562px;
-	background-size: 452px;
-	margin: 26px auto;
-}
-
-.tupianfour {
-	width: 56px;
-	height: 70px;
-	background: url(../image/5.png) no-repeat -394px -570px;
-	background-size: 452px;
-	margin: 26px auto;
-}
-
-.tupianfive {
-	width: 51px;
-	height: 70px;
-	background: url(../image/5.png) no-repeat -130px -630px;
-	background-size: 452px;
-	margin: 26px auto;
-}
 
 /*卫淑杰*/
-
-
 .header{
 	width: 100%;
 	height:74px;
