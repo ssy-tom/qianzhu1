@@ -125,6 +125,38 @@
                 }
             }
         }
+        //头部点击
+        headerP();
+        function headerP(){
+            var line=document.getElementById("line");
+            var headerUl=document.getElementById("headerul");
+            var lis=headerul.children;
+            line.style.left=lis[num].offsetLeft;
+            num=[...lis].indexOf(event.target);
+            var positionLeft;
+            var positionTop;
+            headerUl.addEventListener('mouseover',function(event){
+                if(event.target.className=="liBtn"){
+                    positionLeft=event.target.offsetLeft;
+                    positionTop=event.target.offsetTop;
+                    line.style.left=positionLeft+"px";
+                    line.style.top=positionTop+"px";
+                    line.style.transition="all 0.5s";
+                }
+            },false)
+            headerUl.addEventListener('mouseout',function(event){
+                if(event.target.className=="liBtn"){
+                    line.style.left=lis[0].offsetLeft+"px";
+                    line.style.top=positionTop+"px";
+                    line.style.transition="all 0.5s";
+                }
+            },false)
+        }
+
+
+
+
+
 
         //	于爱民第三屏
         let cases = document.getElementById('cases');
