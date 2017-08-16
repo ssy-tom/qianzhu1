@@ -2935,8 +2935,7 @@ img {
 	/*background-color: black;*/
 }
 .eight>.eightUl>li{
-	width:14.286%;
-	height:100%;
+	height:auto;
 	font-size: 14px;
 	float: left;
 	color:#000000;
