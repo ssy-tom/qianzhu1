@@ -2792,9 +2792,7 @@ img {
 		border-right: none;
 		background: #3a3a3a;
 	}
-	/*.hotline{*/
-		/*left:840px;*/
-	/*}*/
+
 	.hotline>a>span{
 		right:242px;;
 	}
@@ -2807,7 +2805,6 @@ img {
 		top:7px;
 		right:-30px;
 	}
-
 }
 @media (max-width: 461px) {
 	.hotline>span{

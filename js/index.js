@@ -9,6 +9,7 @@
             var position;
             var lis=document.getElementsByClassName("liBtn");
             var line=document.getElementById("line");
+            var logospan=document.getElementById("logospan")
             var cert=document.getElementsByClassName("cert")[0];
             var speed=3;
             var flag=true;
@@ -75,8 +76,16 @@
                                 lis[i].style.transition="all 0.5s";
                                 lis[i].style.color="#00DFB9"
                             }
-                            line.style.width="32px";
+                            line.style.width="40px";
                             line.style.transition="all 0.1s"
+
+                            logospan.style.width="290px";
+                            logospan.style.height="42px";
+                            logospan.style.backgroundSize="100%";
+                            logospan.style.backgroundPosition="center center";
+                            logospan.style.marginTop="0"
+                            logospan.style.transition="all 0.5s";
+
                         }
                         for(let i=0; i<lis.length;i++){
                             lis[i].style.color="#fff"
@@ -94,8 +103,16 @@
                                 lis[i].style.color="#fff"
                             }
                             lis[num].style.color="#00DFB9";
-                            line.style.width="24px";
+                            line.style.width="32px";
                             line.style.transition="all 0.1s"
+
+                            logospan.style.width="210px";
+                           logospan.style.height="33px";
+                           logospan.style.backgroundSize="210px";
+                            logospan.style.backgroundRepeat="no-repeat";
+                           logospan.style.backgroundPosition="0 -2px";
+                            logospan.style.marginTop="10px";
+                            logospan.style.transition="all 0.5s";
                         }
 
                     }
@@ -171,13 +188,15 @@
             let childrena= new Children;
             let headerul=document.getElementById("headerul");
             let box=document.getElementById("box");
-            childrena.init(headerul,box);
+            let logospan=document.getElementById("logospan");
+            childrena.init(headerul,box,logospan);
             childrena.listener();
 
             function Parent(){
                 this.init=function(headerul,box){
                     this.headerul=headerul;
                     this.box=box;
+                    this.logospan=logospan
                     //this.num=0;
                 };
                 this.listener=function(){
@@ -193,14 +212,29 @@
                                     lis[i].style.margin="0 10px";
                                     lis[i].style.transition="all 0.5s";
                                     lis[i].style.color="#fff";
+                                    line.style.width="32px";
                                 }
                                 lis[num].style.color="#00DFB9";
+                                this.logospan.style.width="210px";
+                                this.logospan.style.height="33px";
+                                this.logospan.style.backgroundSize="210px";
+                                this.logospan.style.backgroundRepeat="no-repeat";
+                                this.logospan.style.backgroundPosition="0 -2px";
+                                this.logospan.style.marginTop="10px";
+                                this.logospan.style.transition="all 0.5s";
                             }else if(num==0){
                                 for(var i=0;i<lis.length;i++){
                                     lis[i].style.fontSize="20px";
                                     lis[i].style.margin="0 15px";
+                                    line.style.width="40px";
                                     lis[i].style.transition="all 0.5s";
                                 }
+                                this.logospan.style.width="290px";
+                                this.logospan.style.height="42px";
+                                this.logospan.style.backgroundSize="100%";
+                                this.logospan.style.backgroundPosition="center center";
+                                this.logospan.style.marginTop="0"
+                                this.logospan.style.transition="all 0.5s";
                             }
 
                         }
