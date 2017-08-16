@@ -1,7 +1,6 @@
 (function(window) {
     window.onload = function () {
         //全屏滚动块
-        
         var num=0;
         screenScrolling();
         function screenScrolling(){
